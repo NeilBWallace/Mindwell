@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Button,AppRegistry, Text, View, ListView, StyleSheet, TouchableHighlight,ImageBackground} from 'react-native';
 import PropTypes from 'prop-types';
+import CustomButton from './CustomButton';
+import CustomButton2 from './CustomButton2';
 export default class Home extends Component{
 
     static navigationOptions = {
@@ -56,30 +58,26 @@ export default class Home extends Component{
 
            <View
         style={styles.inputsContainer}>
-        
-      <Button 
-     style={styles.fullWidthButton} 
-     onPress={()=>navigate('Introduction')}
-            title="Introduction"
-        />  
+         <CustomButton 
+		text="Introduction"
+		onPress={()=>navigate('Introduction')}
+		/>
+     
      </View>
      <View
    style={styles.inputsContainer}>
    
- <Button 
-    style={styles.fullWidthButton} 
-    
-    onPress={()=>navigate('Breathing')}
-            title="Breathing"
-        />  
+   <CustomButton 
+		text="Breathing"
+		onPress={()=>navigate('Breathing')}
+		/> 
 </View>
 <View
       style={styles.inputsContainer}>
-         <Button 
-          style={styles.fullWidthButton} 
-          onPress={()=>navigate('Guided')}
-            title="Guided Meditation"
-        />  
+        <CustomButton 
+		text="Guided Meditation"
+		onPress={()=>navigate('Guided')}
+		/>
 
 </View>
 
@@ -89,12 +87,10 @@ export default class Home extends Component{
     <View
         style={styles.inputsContainer2}>
         
-<Button 
- style={styles.fullWidthButton2} 
- color="#008000"
- onPress={()=>navigate('More')}
-            title="More Information"
-        />  
+        <CustomButton2
+		text="More Information"
+		onPress={()=>navigate('More')}
+		/>  
 </View>
 
 <View>

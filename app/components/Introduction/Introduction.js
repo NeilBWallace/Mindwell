@@ -1,4 +1,5 @@
-
+import CustomButton from './CustomButton';
+import CustomButton2 from './CustomButton2';
 
 import React, {
   Component
@@ -135,35 +136,36 @@ export default class Introduction extends Component {
             playWhenInactive={true}
             ignoreSilentSwitch={"ignore"}
           />
-  <View style={styles.inputsContainer1}>
-</View>
+ 
 <View style={styles.inputsContainer1}>
        
-     <Button 
-             style={styles.fullWidthButton} 
-               onPress={() => this.setState({ paused: !this.state.paused })}
-               title="Pause"
-           /> 
-   
-           </View>
-
-         <View style={styles.inputsContainer1}>
-         <Button 
-             style={styles.fullWidthButton} 
-             onPress={()=>{navigate('Home')           
-             this.setState({ paused: true })
-             this.video.seek(0)
-    }
-            }
-               title="Back"
-           /> 
+ 
            </View>
      
         </TouchableOpacity>
       
         <View style={styles.controls}>
         
-
+        <CustomButton 
+             style={styles.fullWidthButton} 
+               onPress={() => this.setState({ paused: !this.state.paused })}
+               text="Pause"
+           /> 
+   
+      
+        
+    
+        
+        
+         <CustomButton 
+             style={styles.fullWidthButton} 
+             onPress={()=>{navigate('Home')           
+             this.setState({ paused: true })
+             this.video.seek(0)
+    }
+            }
+               text="Back"
+           /> 
           <View style={styles.trackingControls}>
             <View style={styles.progress}>
               <View style={[styles.innerProgressCompleted, { flex: flexCompleted }]} />
@@ -182,7 +184,11 @@ const styles = StyleSheet.create({
 
   inputsContainer1: {
     margin:20,
-    padding:20      },
+    padding:20 ,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+       },
 
 
 
@@ -232,6 +238,7 @@ padding:10      },
     bottom: 20,
     left: 20,
     right: 20,
+   
   },
   progress: {
     flex: 1,

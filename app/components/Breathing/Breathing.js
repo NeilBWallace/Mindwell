@@ -1,4 +1,5 @@
-
+import CustomButton from './CustomButton';
+import CustomButton2 from './CustomButton2';
 
 import React, {
   Component
@@ -135,42 +136,28 @@ export default class Breathing extends Component {
             playWhenInactive={true}
             ignoreSilentSwitch={"ignore"}
           />
-     <View style={styles.inputsContainer1}>
- 
-<Button 
+
+    
+
+        </TouchableOpacity>
+      
+        <View style={styles.controls}>
+          <CustomButton 
        style={styles.fullWidthButton} 
          onPress={() => this.setState({ paused: !this.state.paused })}
-         title="Pause"
+         text="Pause"
      /> 
-
-     </View>
-   <View style={styles.inputsContainer1}>
-   <Button 
+ 
+   <CustomButton 
        style={styles.fullWidthButton} 
        onPress={()=>{navigate('Home')           
        this.setState({ paused: true })
        this.video.seek(0)
 }}
-            title="Back"
+            text="Back"
      /> 
-     </View>
-
-        </TouchableOpacity>
-      
-        <View style={styles.controls}>
-          <View style={styles.generalControls}>
-          
-
-          <View
-      style={styles.inputsContainer1}>
-      
-
-</View>
-
-           
-          </View>
-
           <View style={styles.trackingControls}>
+
             <View style={styles.progress}>
               <View style={[styles.innerProgressCompleted, { flex: flexCompleted }]} />
               <View style={[styles.innerProgressRemaining, { flex: flexRemaining }]} />

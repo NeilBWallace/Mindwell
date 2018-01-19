@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Linking,Button,AppRegistry, Text, View, BackgroundImage,Image,TouchableOpacity,StyleSheet} from 'react-native';
 import Video from 'react-native-video';
 import PropTypes from 'prop-types';
+import CustomButton from './CustomButton';
+import CustomButton2 from './CustomButton2';
 export default class More extends Component{
 
     
@@ -61,9 +63,11 @@ http://www.buddhistacademy.com
 
     
             <View style={styles.MainContainer}>
-             <Button 
+
+
+             <CustomButton2
               onPress={()=>navigate('Home')}
-                title="Go Back"
+                text="Go Back"
             />
             </View>
     </View>
