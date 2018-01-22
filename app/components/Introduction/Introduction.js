@@ -19,6 +19,7 @@ import Video from 'react-native-video';
 export default class Introduction extends Component {
   static navigationOptions = {
     title: 'Introduction',
+  
   };
   state = {
     rate: 1,

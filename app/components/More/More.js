@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Linking,Button,AppRegistry, Text, View, BackgroundImage,Image,TouchableOpacity,StyleSheet} from 'react-native';
+import {ScrollView,Linking,Button,AppRegistry, Text, View, BackgroundImage,Image,TouchableOpacity,StyleSheet} from 'react-native';
 import Video from 'react-native-video';
 import PropTypes from 'prop-types';
 import CustomButton from './CustomButton';
@@ -21,7 +21,7 @@ export default class More extends Component{
     render(){
         const { navigate } = this.props.navigation;
         return(
-           
+           <ScrollView>
            <View style={styles.MainContainer}>  
            <Text style={styles.Header}> 
              About Us
@@ -42,10 +42,6 @@ http://www.buddhistacademy.com
 
 </Text>
             
-            
-            
-      
-          
             <Text style={styles.T}>
             Dhamma Nikethanaya Buddhist Academy was set up in April 2004 by Venerable Akurala Samitha and located 
             in the beautiful town of Letchworth Garden City in Hertfordshire, UK.
@@ -71,7 +67,7 @@ http://www.buddhistacademy.com
             />
             </View>
     </View>
-      
+      </ScrollView>
         );
     }
 }

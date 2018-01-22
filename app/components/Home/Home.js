@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
-import {Button,AppRegistry, Text, View, ListView, StyleSheet, TouchableHighlight,ImageBackground} from 'react-native';
+import {TouchableOpacity,Button,AppRegistry, Text, View, ListView, StyleSheet, TouchableHighlight,ImageBackground} from 'react-native';
 import PropTypes from 'prop-types';
 import CustomButton from './CustomButton';
 import CustomButton2 from './CustomButton2';
 export default class Home extends Component{
 
-    static navigationOptions = {
+    static navigationOptions = ({
+        navigation})=>({
         title: 'Mindwell',
- 
+        headerRight:
+        <TouchableOpacity style={{backgroundColor:'orange',margin:10,padding:10}} onPress={()=>navigation.navigate("More")}><Text style={{color:'#ffffff'}}>More</Text>
+       </TouchableOpacity>
+  
+      
 
-      };
+      });
     
 
     constructor(){
@@ -84,19 +89,12 @@ export default class Home extends Component{
 
 
     </View>
-    <View
-        style={styles.inputsContainer2}>
-        
-        <CustomButton2
-		text="More Information"
-		onPress={()=>navigate('More')}
-		/>  
-</View>
+
 
 <View>
-            <Text style={styles.welcome2}>Dhamma Nikethanaya Buddhist Academy</Text>
-            <Text style={styles.welcome3}>2018</Text>
-         
+<Text style={styles.welcome2}></Text>
+            <Text style={styles.welcome2}>Dhamma Nikethanaya Buddhist Academy 2018</Text>
+          
           </View>
 
     </ImageBackground>
@@ -120,8 +118,8 @@ welcome2: {
     fontSize: 15,
     textAlign: 'center',
     
-    margin: 20,
-    position: 'absolute', left: 0, right: 0, bottom: 25,
+    margin: 5,
+    position: 'absolute', left: 0, right: 0, bottom: 5,
    color:'#5e2838'
   },
   welcome3: {
