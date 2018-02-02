@@ -7,7 +7,7 @@ export default class Home extends Component{
 
     static navigationOptions = ({
         navigation})=>({
-        title: 'Mindwell',
+        title: 'Mindwell Meditation',
         headerRight:
         <TouchableOpacity style={{backgroundColor:'orange',margin:10,padding:10}} onPress={()=>navigation.navigate("More")}><Text style={{color:'#ffffff'}}>More</Text>
        </TouchableOpacity>
@@ -64,7 +64,7 @@ export default class Home extends Component{
            <View
         style={styles.inputsContainer}>
          <CustomButton 
-		text="Introduction"
+		text="5 min Introduction"
 		onPress={()=>navigate('Introduction')}
 		/>
      
@@ -73,14 +73,14 @@ export default class Home extends Component{
    style={styles.inputsContainer}>
    
    <CustomButton 
-		text="Breathing"
+		text="10 min Breathing"
 		onPress={()=>navigate('Breathing')}
 		/> 
 </View>
 <View
       style={styles.inputsContainer}>
         <CustomButton 
-		text="Guided Meditation"
+		text="20 min Guided Meditation"
 		onPress={()=>navigate('Guided')}
 		/>
 

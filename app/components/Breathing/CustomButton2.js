@@ -14,7 +14,6 @@ class CustomButton2 extends Component {
 		);
 	}
 }
-
 CustomButton2.propTypes = {
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired
@@ -28,8 +27,9 @@ const styles = StyleSheet.create({
   },
   
   buttonStyle: {
+		margin:10,
 	padding:10,
-	backgroundColor: '#1abc9c',
+	backgroundColor: '#800020',
 	borderRadius:5
   }
 });

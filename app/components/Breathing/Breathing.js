@@ -148,7 +148,7 @@ export default class Breathing extends Component {
          text="Pause"
      /> 
  
-   <CustomButton 
+   <CustomButton2
        style={styles.fullWidthButton} 
        onPress={()=>{navigate('Home')           
        this.setState({ paused: true })

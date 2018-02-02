@@ -152,7 +152,7 @@ export default class Guided extends Component {
       
 
            
-      <CustomButton 
+      <CustomButton2
           style={styles.fullWidthButton} 
           onPress={()=>{navigate('Home')           
           this.setState({ paused: true })
